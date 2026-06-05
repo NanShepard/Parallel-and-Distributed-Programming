@@ -1,0 +1,25 @@
+Link CANVA: https://www.canva.com/design/DAG6v7XuOz0/O6p07Z1uy-JUC8MpsjiXyQ/edit
+
+
+1. Kích hoạt Spark Master
+spark-class org.apache.spark.deploy.master.Master --host 26.163.90.8
+
+2. Kích hoạt Spark Worker
+spark-class org.apache.spark.deploy.worker.Worker --host 26.11.67.195 spark://26.163.90.8:7077
+
+3. Kích hoạt HDFS namenode
+start hdfs namenode
+
+4. Kích hoạt HDFS datanode
+start hdfs datanode
+
+5. Spark UI
+http://desktop-57u3old:8080/
+
+6. HDFS UI
+http://localhost:9870/dfshealth.html#tab-datanode
+
+7. setting python for CMD
+
+set PYSPARK_PYTHON=python
+set PYSPARK_DRIVER_PYTHON=python
